@@ -27,4 +27,22 @@ This little project was just a way for me to learn more about using Raspberry Pi
 * an led (which turns on when the motion sensor has been tripped, just so we can tell when that's happened)
 * a resistor that's about 300ohms (ish)
 * a 16 by 2 LCD screen
-* a small speaker with external power. 
+* a small speaker with external power that has an audio plug.
+
+## Overview
+
+Here's an image of the whole janky set up:
+![IMG-4656](https://user-images.githubusercontent.com/8962291/228928943-8d0b49ad-118f-47eb-937f-2a59014b24fb.JPG)
+
+The PIR sensor is in the toilet paper tube to narrow its field of vision. Otherwise, it'll get tripped if you come anywhere near it. The sensor also has a couple knobs on its underside that let you dial-in how far it "sees" and how frequently it scans for movement. The audio jack situation is basically just taped together. You just want to be sure that the negative lead is wired to ground on the pico. 
+
+![IMG-4657](https://user-images.githubusercontent.com/8962291/228928962-7f1cee85-4f39-431f-a6a7-1a24d8b23440.JPG)
+
+Here are a couple examples of the LCD screen output:
+
+![IMG-4658](https://user-images.githubusercontent.com/8962291/228928977-fe8c2561-68d2-43bb-97e2-fad381cec00a.JPG)
+![IMG-4659](https://user-images.githubusercontent.com/8962291/228929009-b882f2f4-20c6-4828-94d0-733f2bf052d2.JPG)
+
+## Codefiles
+
+
