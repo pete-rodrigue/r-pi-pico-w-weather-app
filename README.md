@@ -43,6 +43,16 @@ Here are a couple examples of the LCD screen output:
 ![IMG-4658](https://user-images.githubusercontent.com/8962291/228928977-fe8c2561-68d2-43bb-97e2-fad381cec00a.JPG)
 ![IMG-4659](https://user-images.githubusercontent.com/8962291/228929009-b882f2f4-20c6-4828-94d0-733f2bf052d2.JPG)
 
-## Codefiles
+## Codefiles & file structure
 
+* Readme: the thing you're reading now. Just explains how the code works!
+* code.py: the CircuitPython code that runs when you turn on the pico. Runs the script that notices your movement, tells you the weather, etc.
+* settings.toml: stores your wifi network name and password
+* the "audio_clips" folder: this just stores the mp3 audio files that the pico will play from the speaker
+* the "lib" or "libraries" folder: the CircuitPython code we wrote requires we call on some additional code, which helps visit the websites and display text on the LCD screen. Specifically:
+ * adafruit_requests.mpy: some code from the Adafruit people that helps us visit websites and get data from those websites. More on that here: https://docs.circuitpython.org/projects/requests/en/latest/api.html
+ * the "lcd" folder: This contains some (slightly modified code from Dan Halbert, which helps CircuitPython interact with the kind of LCD screen we're using (there are slightly different kinds of these LCD screens; you may have a different kind than me). Dan Halbert's repo is here: https://github.com/dhalbert/CircuitPython_LCD/tree/minimal. I basically took the "minimal"/pared down version of his code, and tweaked it so that it also lets you turn the LCD backlight on and off from our main codefile (code.py). See Dan's repo for more.
+
+
+Anyway, a fun little project!
 
