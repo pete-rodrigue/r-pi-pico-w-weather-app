@@ -46,7 +46,7 @@ Here are a couple examples of the LCD screen output:
 ## Codefiles & file structure
 
 * Readme: the thing you're reading now. Just explains how the code works!
-* code.py: the CircuitPython code that runs when you turn on the pico. Runs the script that notices your movement, tells you the weather, etc.
+* code.py: the CircuitPython code that runs when you turn on the pico. Runs the script that notices your movement, tells you the weather, etc. See the code for more; the comments explain what each chunk of code does.
 * settings.toml: stores your wifi network name and password
 * the "audio_clips" folder: this just stores the mp3 audio files that the pico will play from the speaker
 * the "lib" or "libraries" folder: the CircuitPython code we wrote requires we call on some additional code, which helps visit the websites and display text on the LCD screen. Specifically:
