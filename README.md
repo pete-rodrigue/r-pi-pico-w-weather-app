@@ -31,7 +31,7 @@ This little project was just a way for me to learn more about using Raspberry Pi
 
 ## Overview
 
-Here's an image of the whole janky set up:
+Here's an image of the whole janky set up; ignore some of the wires, which are unnecessary (see the diagram below for help with wiring).
 ![IMG-4656](https://user-images.githubusercontent.com/8962291/228928943-8d0b49ad-118f-47eb-937f-2a59014b24fb.JPG)
 
 The PIR sensor is in the toilet paper tube to narrow its field of vision. Otherwise, it'll get tripped if you come anywhere near it. The sensor also has a couple knobs on its underside that let you dial-in how far it "sees" and how frequently it scans for movement. The audio jack situation is basically just taped together. You just want to be sure that the negative lead is wired to ground on the pico. 
@@ -53,6 +53,10 @@ Here are a couple examples of the LCD screen output:
     * adafruit_requests.mpy: some code from the Adafruit people that helps us visit websites and get data from those websites. More on that here: https://docs.circuitpython.org/projects/requests/en/latest/api.html
     * the "lcd" folder: This contains some (slightly modified code from Dan Halbert, which helps CircuitPython interact with the kind of LCD screen we're using (there are slightly different kinds of these LCD screens; you may have a different kind than me). Dan Halbert's repo is here: https://github.com/dhalbert/CircuitPython_LCD/tree/minimal. I basically took the "minimal"/pared down version of his code, and tweaked it so that it also lets you turn the LCD backlight on and off from our main codefile (code.py). See Dan's repo for more.
 
+## Wiring diagram
+
+I think I did this correctly? The PIR sensor is shown in the top part of the graphic. The speaker is at the bottom; the LCD screen is on the left. You will likely need to read the specific documentation (and reference the [Pico pin diagram](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)) to wire everything up correctly. My wiring job was a little haphazard.
+![weatherBot_bb](https://user-images.githubusercontent.com/8962291/228947938-6c39edc8-0ca7-446d-ab3f-7c516ca58445.jpg)
 
 Anyway, a fun little project!
 
