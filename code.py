@@ -64,14 +64,19 @@ def getWeather(url='https://api.weather.gov/gridpoints/LWX/96,73/forecast'):
 # visit the AirNow.gov API and get the current AQI value. Return "good", "moderate", or "bad", depending on the value
 # note that unlike the NOAA API, this API has a key. So you need to visit the AirNow.gov API website, sign up, and get a key.
 def getAQI(myzip, date, EPA_api_key):
-    url = 'https://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode={}&date={}&distance=1&API_KEY={}'.format(myzip, date, EPA_api_key)
-    aqi = request.get(url).json()[0]['AQI']
-    if aqi <= 50:
-        return 'good'
-    elif 50 < aqi <= 100:
-        return 'moderate'
-    else:
-        return 'bad'
+    url = 'https://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode={}&date={}&API_KEY={}'.format(myzip, date, EPA_api_key)
+    try:
+        aqi = request.get(url).json()[0]['AQI']
+        if aqi <= 50:
+            return 'good'
+        elif 50 < aqi <= 100:
+            return 'moderate'
+        else:
+            return 'bad'
+    except:
+        return 'AQI API err'
+    
+    
 
 ## try/catch statement to connect to your wifi
 # note that we don't store our wifi password in the actual code; we store it in settings.toml
