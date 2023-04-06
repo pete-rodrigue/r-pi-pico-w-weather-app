@@ -74,7 +74,7 @@ def getAQI(myzip, date, EPA_api_key):
         else:
             return 'bad'
     except:
-        return 'AQI API err'
+        return 'API err'
     
     
 
